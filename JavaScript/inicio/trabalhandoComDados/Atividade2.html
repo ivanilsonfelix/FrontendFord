@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2</title>
+</head>
+<body>
+    <script>
+
+        //entrada dos dados
+
+        const primeiraNota = parseInt(prompt("Informe a primeira nota:"))
+        const segundaNota = parseInt(prompt("Informe a segunda nota:"))
+        const terceiraNota = parseInt(prompt("Informe a terceira nota:"))
+        const quartaNota = parseInt(prompt("Informe a quarta nota:"))
+
+        // processamento
+
+        const mediaAlunos = (primeiraNota + segundaNota + terceiraNota +quartaNota)/4
+
+        // saida de dados
+        
+        if (mediaAlunos == 0) {
+            alert("Reprovado")
+            
+        }else{
+            if (mediaAlunos <= 5) {
+                alert("Recuperação")
+                
+            }else{
+                   alert("Aprovado") 
+                }
+            }
+        
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
