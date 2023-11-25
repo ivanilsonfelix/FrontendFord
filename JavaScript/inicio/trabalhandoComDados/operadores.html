@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+   <script>
+
+    // 3 tipos de mandar mensagens
+    
+
+    // prompt("Informe o seu nome:")
+    // // falar sobre outras mensagens que a window pode enviar
+
+    // alert("Ola, mundo!")
+
+    // confirm("Você deseja enviar os dados?")
+
+
+    // entrada de dados
+    const nome = prompt("informe seu nome:")
+    const sobrenome = prompt("Informe seu sobrenome")
+    const anoNascimentoPessoa = prompt("Informe o ano do seu nascimento:")
+    let idadePessoa;
+    let anoAtual = 2023;
+    let mesesPessoa;
+    let diasPessoas;
+    let horasPessoa;
+    let minPessoa;
+
+
+
+    
+
+    // processamento
+    // informe o ano de nascimento e em seguida mostrar idade da pessoa
+    idadePessoa = anoAtual - anoNascimentoPessoa
+    mesesPessoa = idadePessoa * 12
+    diasPessoas = idadePessoa * 365
+    horasPessoa = diasPessoas * 24
+    minPessoa = horasPessoa * 60
+
+
+
+
+
+    // saida de dados
+    console.log("Olá, mundo!")
+    // concatenar
+    console.log("o nome da pessoa é: " +  nome +  " e o sobrenome da pessoa é: " +  sobrenome);
+    // interpolar
+    alert( `O nome da pessoa é: ${nome} e o sobrenome é: ${sobrenome} e a idade é ${idadePessoa} anos ${mesesPessoa} meses ${diasPessoas} dias ${horasPessoa} horas ${minPessoa} minutos`);
+
+
+   </script> 
+</body>
+</html>
