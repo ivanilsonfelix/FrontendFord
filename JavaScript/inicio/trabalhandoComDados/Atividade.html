@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1</title>
+</head>
+<body>
+    <script>
+        // crie um algoritmo que calcule a idade de uma pessoa em 
+        // meses - dias - horas
+
+        // declara variaveis 
+        let meses = 12
+        let dias = 365
+        let horas = 24
+        let minutos = 60
+
+
+        // entrada de dados
+        const nomePessoa = prompt("Informe seu primeiro nome:")
+        const idadePessoa = prompt("Informe qual idade:")
+
+
+        // processamento dos dados
+        let idadeMeses = idadePessoa * meses
+        let idadeDias = idadePessoa * dias
+        let idadeHoras = idadeDias * horas
+        let idadeMinutos = idadeHoras * minutos
+
+
+        // saida de dados
+        alert(`nome: ${nomePessoa}, idade em meses: ${idadeMeses}, idade em dias: ${idadeDias}, idade em horas: ${idadeHoras}, idade em minutos: ${idadeMinutos}`)
+    </script>
+</body>
+</html>
