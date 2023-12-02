@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AtividadeCalculadora</title>
 </head>
 <body>
     <!-- crie uma calculadora que irá capturar qual operação aritmética o usuário deseja fazer -->
@@ -21,5 +21,123 @@
     <!-- exibir os dois numeros que o usuário informou e em seguida o resultado da operação -->
     <!-- ex: num1 = 10  num2 = 20 -->
     <!-- a soma de num1 + num2 = 30 -->
+
+    <!-- <script>
+        // switch-case
+        // Calculadora Aritmética
+
+
+        // Entrada de dados
+        const opcaoUsuario =  prompt("Qual operação aritimética deseja realizar? *, /, - ou +?")
+        const num1Usuario = parseInt (prompt("Digite o primeiro número"))
+        const num2Usuario = parseInt (prompt("Digite o segundo número"))
+        
+
+        let respostaUser
+        // Processamento
+        switch(opcaoUsuario){
+            case "*":
+                alert(respostaUser =  num1Usuario * num2Usuario )
+
+            // Saída de dados
+            alert(`Primeiro Número ${num1Usuario} / MULTIPLICAÇÃO ${opcaoUsuario}  / Segundo Número ${num2Usuario}` )
+
+            break;
+
+
+            case "/":
+                alert(respostaUser =  num1Usuario / num2Usuario )
+
+            // Saída de dados
+            alert(`Primeiro Número ${num1Usuario} / DIVISÃO ${opcaoUsuario}  / Segundo Número ${num2Usuario}` )
+
+            break;
+
+            case "-":
+                alert(respostaUser =  num1Usuario - num2Usuario )
+
+            // Saída de dados
+            alert(`Primeiro Número ${num1Usuario} / SUBTRAÇÃO ${opcaoUsuario}  / Segundo Número ${num2Usuario}` )
+
+            break;
+
+            case "+":
+                alert (respostaUser =  num1Usuario + num2Usuario ) 
+
+            // Saída de dados
+            alert(`Primeiro Número ${num1Usuario} / SOMA ${opcaoUsuario}  / Segundo Número ${num2Usuario}` )
+
+            break;
+
+            default:
+                alert("Opção inválida")
+                break;
+
+
+            
+
+            
+
+
+
+        }
+
+    </script> -->
+
+
+    <!-- segunda forma de fazer -->
+
+    <script>
+        let num1 = parseInt(prompt("Informe o primeiro numero"))
+        let num2 = parseInt(prompt("Informe o segundo numero"))
+
+        // menu opções
+
+        const escolhaUser = Number(prompt(`
+        Escolha uma operação:
+        [1] - Multiplicação
+        [2] - Divisão
+        [3] - Subtração
+        [4] - Soma
+
+        `))
+
+        // Processamento
+        switch(escolhaUser) {
+            case 1:
+                const calculoMult =  num1 * num2
+                alert(`O resultado ${num1} * ${num2} = ${calculoMult}`)
+                
+                break;
+
+            case 2:
+                const calculoDiv =  num1 / num2
+               
+                num1 == 0 || num2 == 0 ? alert("Não é possivel dividir por 0") : alert(`O resultado ${num1} / ${num2} = ${calculoDiv}`)
+                
+                break;
+
+            case 3:
+                const calculoSub =  num1 - num2
+                alert(`O resultado ${num1} - ${num2} = ${calculoSub}`)
+                             
+                break;
+
+            case 4:
+                const calculoSoma =  num1 + num2
+                alert(`O resultado ${num1} + ${num2} = ${calculoSoma}`)
+                
+                break;
+        
+            default:
+                alert("Opção inválida!")
+                break;
+
+
+
+
+        }
+
+    </script>
 </body>
 </html>
