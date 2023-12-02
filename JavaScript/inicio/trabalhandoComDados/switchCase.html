@@ -98,6 +98,7 @@
 
 
         // menu personalizado
+        // LITERAL TEMPLATE
         alert(`
             Bem vindo a minha adega, escolha uma opção abaixo:
             1 - Coca-cola
@@ -113,13 +114,13 @@
 
         // processamento
 
-        let respostaUser; 
+        let respostaUser;
 
         switch (opcaoUsuario) {
             case 1:
                 // saida de dados
                 alert("A opção que o usuário informou é Coca-cola")
-                respostaUser =  prompt("Você deseja acrescentar gelo e limão?")
+                respostaUser =  prompt("Você deseja acrescentar gelo e limão? sim ou não ?") .toLocaleLowerCase()
 
 
                 // ternario
@@ -130,7 +131,7 @@
             case 2:
                 // saida de dados
                 alert("A opção que o usuário informou é Fanta-Uva")
-                respostaUser = prompt("Você deseja acrescentar gelo?")
+                respostaUser = prompt("Você deseja acrescentar gelo? sim ou não ? ") .toLocaleLowerCase()
 
 
                 respostaUser == "sim" ? alert("A sua bebida terá gelo") : alert("Ok, sem gelo")
@@ -138,7 +139,7 @@
             case 3:
                 // saida de dados
                 alert("A opção que o usuário informou é Cachaça")
-                respostaUser = prompt("Você deseja acrescentar limão?")
+                respostaUser = prompt("Você deseja acrescentar limão? sim ou não ?") .toLocaleLowerCase()
 
 
                 respostaUser == "sim" ? alert("A sua bebida terá limão") : alert(" Ok, sem limão")
@@ -146,7 +147,7 @@
             case 4:
                 // saida de dados
                 alert("A opção que o usuário informou é Cantinho")
-                respostaUser = prompt("Você deseja acrescentar gelo?")
+                respostaUser = prompt("Você deseja acrescentar gelo? sim ou não ?") .toLocaleLowerCase()
 
 
                 respostaUser =="sim" ? alert("A sua bebida terá gelo") : alert("Ok, sem limão")
@@ -155,7 +156,7 @@
             case 5:
                 // saida de dados
                 alert("A opção que o usuário informou é Cerveja")
-                respostaUser= prompt("Você deseja com colarinho?")
+                respostaUser= prompt("Você deseja com colarinho? sim ou não ?") .toLocaleLowerCase()
 
 
                 respostaUser == "sim" ? alert("A sua cerveja terá colarinho") : alert("Ok, sem colarinho")
@@ -163,7 +164,7 @@
             case 6:
                 // saida de dados
                 alert("A opção que o usuário informou é Corote")
-                respostaUser = prompt("Você deseja limão?")
+                respostaUser = prompt("Você deseja limão? sim ou não ?") .toLocaleLowerCase()
 
 
                 respostaUser == "sim" ? alert("O seu corote terá limão") : alert("Ok, sem limão")
