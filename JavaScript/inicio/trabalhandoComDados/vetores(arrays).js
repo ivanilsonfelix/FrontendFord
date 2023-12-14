@@ -138,12 +138,14 @@ console.log(arraySortNumber);
 //utilizar arrow functions
 //se necessário, utilize outros métodos de array
 
-const nomeArray = ['1rafael' , '2hellen' , '3gabriele' , '4ricardo' , '5ivanilson'] 
-const sobrenomeArray = ['1perdigão' , '2silva' , '3costa' , '4almeida' , '5felix']
-const nomeCompletoArray = nomeArray.concat(sobrenomeArray)
-console.log(nomeCompletoArray)
-nomeCompletoArray.sort()
-console.log(nomeCompletoArray)
+
+
+const nomeArray = ['rafael' , 'hellen' , 'gabriele' , 'ricardo' , 'ivanilson']; 
+const sobrenomeArray = ['perdigão' , 'silva' , 'costa' , 'almeida' , 'felix'];
+const nomeCompletoArray = nomeArray.map((nome , index) => nome + " " + sobrenomeArray[index]);
+    
+
+console.log(nomeCompletoArray);
 
 
 
