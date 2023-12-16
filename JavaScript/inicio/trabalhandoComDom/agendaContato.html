@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <script>
+        //Exercício 3:   Agenda de contatos com edição 
+        // Crie uma agenda de contatos que permita cadastrar,
+        // visualizar. editar e excluir contatos,
+        //Utilize switch-case while e estruturas condicionais para gerenciar as operações.
+
+
+
+
+        let loopBrake = true
+        
+        let arrayAgenda = []
+        while (loopBrake) {
+        let escolhaUsuário = parseInt(prompt(`
+               Escolha uma opção abaixo:
+            ---------------------------------
+            [1] - Cadastrar um usuário...
+            [2] - Visualizar um usuário...
+            [3] - Atualizar um usuário...
+            [4] - Excluir um usuário...
+            [5] - Sair do programa CRUD...
+        `))
+        switch (escolhaUsuário) {
+            case 1:
+
+                //Criar a variável para receber a data atual e exibir na agenda
+                
+                
+                let nome = prompt("Informe o seu primeiro nome:")
+                let numTelefone = prompt("Informe o seu número de telefone:")
+                arrayAgenda.push({nome,numTelefone})
+
+                console.log(arrayAgenda);
+
+                break;
+                alert("Usuário cadastrado com sucesso!!!")
+                
+                    
+                case 2:
+
+                let listaDeContatos = "Lista de contatos: \n";    
+
+                //Listagem dos dados => percorrer o array de objetos(foreach - for)
+
+                for (let listaArray of arrayAgenda) {
+
+                    //nom: nomeArray, numeroTelefone: numeroTelefoneArray
+                    listaDeContatos += `Nome: ${listaArray.nome}, Número de telefone: ${listaArray.numTelefone}\n`
+                                          
+                }
+                alert (listaDeContatos)
+                
+
+                
+                break;
+                case 3:
+                
+                break;
+                case 4:
+                
+                break;
+                
+                case 5:
+                    alert ("Até a proxima.")
+
+                    loopBrake = false
+                    //process.exit();
+                
+                break;
+
+        
+            default:
+                alert ("Opção inválida, tente novamente")
+                break;
+        }
+    }
+
+        
+    </script>
+    
+</body>
+</html>
