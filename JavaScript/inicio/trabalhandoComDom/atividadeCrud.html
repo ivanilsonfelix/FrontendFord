@@ -1,53 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Menu</title>
+    <title>Crud Usuario</title>
 </head>
+
 <body>
     <script>
-        let arrayAgenda
-        let arrayMenu = []
-        let menUsuário = parseInt(prompt(`
+        //inicializador = array
+        const arrUsuario = []
+        let escolhaUser;
 
+        //realizar construção do menu
+        function mostrarMenu() {
+            escolhaUser = Number(prompt(`
+                [1] - Realizar cadastro usuario
+                [2] - Listar usuario
+                [3] - Atualizar usuario
+                [4] - Deletar usuario
+                [5] - sair do programa
+            `));
+        }
+        //Primeiro método -> HTTP Post (Cadastro)
 
-        OPÇÕES DO USUÁRIO
-        -------------------
-        [1] - Cadastrar
-        [2] - Listar
-        [3] - Atualizar
-        [4] - Deletar
+        function cadastroUsuario() {
 
-        `))
+            const nomeUsuario = prompt("Qual o nome do usuário?");
+            const emailUsuario = prompt("Qual o email do usuário?")
 
-        switch (menUsuário) {
-            case 1:
+            //validação:
+            if (!nomeUsuario || !emailUsuario) {
+                alert("Os campos são obrigatórios!")
+            }
 
-                               
-                
-                let nome = prompt("Informe o seu nome:") 
-                let email = prompt("Informe o seu email:")
-                let senha = prompt("Digite sua senha")
-                arrayAgenda.push({nome,email,senha})
-                
+            arrUsuario.push({ nomeUsuario, emailUsuario })
+            alert("usuário foi cadastro com sucesso!");
+        }
 
-                console.log(arrayAgenda);
+        //realizar a visualização dos usuários
+        function visualizarUsuario() {
+            let listaUsuario;
+            for (const usuario of arrUsuario) {
+                listaUsuario += (`
+                    Nome: ${usuario.nomeUsuario}, Email: ${usuario.emailUsuario}
+                `)
 
-                alert("Usuário cadastrado com sucesso!!!")
-                break;
-                
-                
+                // arrUsuario.forEach( (usuario) => {
+
+                //     //lógica de exibição
+                //     usuario.nomeUsuario,
+                //     usuario.emailUsuario
+                // })
+
+                alert("****** Lista de Usuarios ******", listaUsuario)
+            }
         }
 
 
+        function excluirUsuario() {
+            const nomeParaExcluir = prompt("Informe o nome a ser excluido: ")
+            const procurarNomeParaExcluir = arrUsuario.findIndex(usuario => usuario.nomeUsuario === nomeParaExcluir)
 
+            if (procurarNomeParaExcluir === -1) {
+                alert("Usuario não foi encontrado!")
+                return;
+            }
 
+            arrUsuario.splice(procurarNomeParaExcluir, 1)
+
+            alert("Usuario foi excluído com sucesso!!!!!")
+        }
+
+        mostrarMenu()
+
+        while (escolhaUser !== 5) {
+
+            switch (escolhaUser) {
+                case 1:
+                    cadastroUsuario()
+                    break;
+                case 2:
+                    visualizarUsuario()
+                    break;
+                // case 3:
+                //         atualizarUsuario()
+                //     break;
+                case 4:
+                    excluirUsuario()
+                    break;
+                case 5:
+                    proccess.exit()
+                    break;
+                default:
+                    break;
+            }
+        }
 
 
     </script>
-    
 </body>
+
 </html>
-        
