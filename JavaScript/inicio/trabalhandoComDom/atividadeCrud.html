@@ -24,17 +24,36 @@
             `)
         }
 
+        // function dataCadastroUsuario() {
+        //     let date = new Date()
+            
+        //     let dia = date.getDay().toString().padStart(2, '0')
+        //     let mes = (date.getMonth() + 1) .toString().padStart(2, '0')
+        //     let ano = date.getFullYear().toString()
+
+        //     const dataCadastro = `${dia}/${mes}/${ano}`
+        //     return dataCadastro
+        // }
+
         //MÉTODO DE CADASTRAR (VERBO HTTP: POST)
 
         function adicionarUsuario() {
             let nomeUsuario = prompt("Qual o nome do usuário: ")
             let emailUsuario = prompt("Qual o email do usuário:")
 
+            let date = new Date();
+
+            let ano = date.getFullYear();
+            let mes = (date.getMonth() + 1).toString();
+            let dia = date.getDate().toString();
+
+            const dataAtual = `${dia}/${mes}/${ano}`
+
             if (!nomeUsuario || !emailUsuario) {
                 alert("O nome do campo é obrigatório!")
             }
 
-            arrUsuario.push({ nomeUsuario, emailUsuario })
+            arrUsuario.push({ nomeUsuario, emailUsuario, dataAtual })
 
             console.log(arrUsuario);
         }
@@ -42,13 +61,15 @@
         //MÉTODO DE LISTAR (VERBO HTTP: GET)
 
         function listarUsuario() {
+            // dataCadastroUsuario()
             let listaUser;
-
+            
             for (const usuario of arrUsuario) {
                 listaUser += (`
-                    Nome: ${usuario.nomeUsuario}, Email: ${usuario.emailUsuario}
+                    Nome: ${usuario.nomeUsuario}, Email: ${usuario.emailUsuario} , Data de cadastro: ${usuario.dataAtual}
                 `)
             }
+
             alert("***** Lista de Usuários *****" + listaUser)
         }
 
@@ -92,12 +113,9 @@
             let confirmacao = confirm("Deseja mesmo deletar o usuario? ")
 
             if (confirmacao) {
-                
-
                 arrUsuario.splice(indiceDelete, 1)
-    
-                alert("Usuario foi deletado com sucesso!")
 
+                alert("Usuario foi deletado com sucesso!")
             }
 
         }
@@ -125,15 +143,12 @@
                 case 5:
                     alert("Saindo do programa.... Até logo")
                     break;
-
                 default:
                     alert("Opção inválida")
                     break;
             }
 
         }
-
-
     </script>
 </body>
 
